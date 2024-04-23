@@ -1,0 +1,663 @@
+<!doctype html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farid's Portfolio</title>
+    <link href="./css/final.css" rel="stylesheet" />
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Header Section Start -->
+    <header
+      class="absolute top-0 left-0 items-center w-full bg-transparent lg:flex"
+    >
+      <div class="w-11/12 mx-auto lg:w-9/12">
+        <div class="relative flex items-center justify-between">
+          <div class="px-4">
+            <a href="#home"
+              ><img
+                src="img/Fredf-removebg-preview.png"
+                alt="logo"
+                width="40"
+                class="dark:drop-shadow-putih dark:animate-pulse"
+            /></a>
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="absolute right-0 block lg:hidden"
+            >
+              <span
+                class="transition duration-300 ease-in-out origin-top-left hamburger-line"
+              ></span>
+              <span
+                class="transition duration-300 ease-in-out hamburger-line"
+              ></span>
+              <span
+                class="transition duration-300 ease-in-out origin-bottom-left hamburger-line"
+              ></span>
+            </button>
+            <nav
+              id="nav-menu"
+              class="absolute hidden py-4 bg-white rounded-lg shadow-lg max-w-[250px] w-full right-4 top-full lg:block lg:bg-transparent lg:static lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-600 dark:lg:bg-transparent"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a href="#home" class="nav-burger dark:text-white">Home </a>
+                </li>
+                <li class="group">
+                  <a href="#about" class="nav-burger dark:text-white">About</a>
+                </li>
+                <li class="group">
+                  <a href="#portfolio" class="nav-burger dark:text-white"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="group">
+                  <a href="#skills" class="nav-burger dark:text-white"
+                    >Skills</a
+                  >
+                </li>
+                <li class="group">
+                  <a href="#contact" class="nav-burger dark:text-white"
+                    >Contact</a
+                  >
+                </li>
+                <li class="flex items-center pl-8">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-primary dark:text-white"
+                      >Light</span
+                    >
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div
+                        class="flex items-center h-5 p-1 rounded-full cursor-pointer w-9 bg-primary"
+                      >
+                        <div
+                          class="w-4 h-4 transition duration-300 ease-in-out bg-white rounded-full toggle-circle"
+                        ></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-primary dark:text-white"
+                      >Dark</span
+                    >
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header Section End -->
+    <!-- Hero section Start -->
+    <section id="home" class="pt-36 lg:pt-28 dark:bg-dark">
+      <div class="w-11/12 mx-auto lg:w-9/12">
+        <div class="flex flex-wrap">
+          <div class="self-center w-full px-4 mx-auto lg:w-1/2">
+            <h1
+              class="text-base font-semibold text-primary md:text-xl lg:text-2xl dark:text-slate-100"
+            >
+              Hi everyone, my name is
+              <span
+                class="block text-2xl font-bold dark:text-white text-dark lg:text-4xl"
+                >Farid Firdaus</span
+              >
+            </h1>
+            <h4 class="text-slate-500">Student</h4>
+            <p
+              class="mt-4 mb-10 leading-relaxed text-slate-600 dark:text-slate-400"
+            >
+              Welcome to my journey. I'm a student passionate about learning and
+              exploring new things. Here, I'll be sharing my experiences,
+              insights, and thoughts with you. Join me as I embark on this
+              exciting journey of growth and discovery!
+            </p>
+            <a
+              href="#"
+              class="px-6 py-3 text-lg text-white rounded-full bg-primary hover:shadow-lg hover:opacity-90 dark:bg-slate-400 dark:text-primary"
+              >Contact Me</a
+            >
+          </div>
+          <div class="mx-auto">
+            <img
+              src="img/Fredf-removebg-preview.png "
+              alt="logo"
+              class="items-center mx-auto drop-shadow-2xl dark:drop-shadow-putih dark:animate-pulse"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero section End -->
+    <!-- About section Start -->
+    <section id="about" class="pt-32 pb-32 dark:bg-dark">
+      <div class="w-11/12 mx-auto lg:w-9/12">
+        <div class="flex flex-wrap">
+          <div class="self-center w-full px-4 lg:w-1/2">
+            <h1 class="font-bold uppercase text-primary dark:text-white">
+              About Me
+            </h1>
+            <p
+              class="mb-10 font-medium leading-relaxed text-slate-600 dark:text-slate-300"
+            >
+              An undergraduate IT student at Siliwangi University who is
+              interested in software development and cybersecurity.
+            </p>
+          </div>
+          <div class="w-full px-4 lg:w-1/2">
+            <h1
+              class="mb-3 font-semibold uppercase text-primary dark:text-white"
+            >
+              Social Media
+            </h1>
+            <div class="flex items-center">
+              <!-- Linkedin -->
+              <a
+                href="https://www.linkedin.com/in/farid-firdaus-2b0034297"
+                target="_blank"
+                class="custom-border"
+                ><svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  class="fill-current"
+                >
+                  <title>LinkedIn</title>
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  /></svg
+              ></a>
+              <!-- Linkedin End -->
+              <!-- Instagram -->
+              <a
+                href="https://www.instagram.com/riddd.fir"
+                class="custom-border"
+                target="_blank"
+                ><svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  class="fill-current"
+                >
+                  <title>Instagram</title>
+                  <path
+                    d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+                  />
+                </svg>
+              </a>
+              <!-- Instagram End-->
+              <!-- Github Start -->
+              <a
+                href="https://github.com/faridfirdaus-fred"
+                target="_blank"
+                class="custom-border"
+              >
+                <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-current"
+                  width="20"
+                >
+                  <title>GitHub</title>
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                  /></svg
+              ></a>
+              <!-- Facebook Start -->
+              <a
+                href="https://www.facebook.com/farid.forster.5/"
+                class="custom-border"
+                target="_blank"
+                ><svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  class="fill-current"
+                >
+                  <title>Facebook</title>
+                  <path
+                    d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"
+                  /></svg
+              ></a>
+              <!-- Facebook End -->
+              <!-- Email Start -->
+              <a
+                href="mailto:fdiraf77@gmail.com"
+                target="_blank"
+                class="custom-border"
+              >
+                <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  class="fill-current"
+                >
+                  <title>Gmail</title>
+                  <path
+                    d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+                  /></svg
+              ></a>
+              <!-- Email End -->
+              <!-- X Start -->
+              <a
+                href="https://twitter.com/faredrid"
+                target="_blank"
+                class="custom-border"
+                ><svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  class="fill-current"
+                >
+                  <title>X</title>
+                  <path
+                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+                  /></svg
+              ></a>
+              <!-- X End -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About section End -->
+    <!-- Portfolio section start -->
+    <section id="portfolio" class="pb-16 pt-36 bg-slate-100 dark:bg-slate-800">
+      <div class="w-11/12 mx-auto lg:w-9/12">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto mb-16 text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary dark:text-white">
+              Portfolio
+            </h4>
+            <h2 class="mb-4 text-3xl font-bold text-dark dark:text-slate-200">
+              Recent Project
+            </h2>
+            <p class="font-medium text-md text-slate-600 dark:text-slate-400">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius non
+              natus sequi ut! Blanditiis, placeat at nobis perspiciatis sunt
+              explicabo.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-wrap w-full px-4 justify center">
+          <div class="p-4 md-12 md:w-1/2">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <img
+                src="img/Screenshot from 2024-04-21 02-28-26.png"
+                width="w-full"
+                alt="Web Portfolio"
+              />
+            </div>
+            <h3
+              class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white"
+            >
+              My Portdolio Website
+            </h3>
+            <p
+              class="text-base font-medium text-slate-600 lg:text-lg dark:text-slate-400"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+              exercitationem autem? Laudantium?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio section End -->
+    <!-- Skills Section Start -->
+    <section id="skills" class="pb-16 pt-36 bg-slate-700 dark:bg-slate-800">
+      <div class="w-11/12 mx-auto lg:w-9/12">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 text-center">
+            <h4 class="mb-2 text-lg font-semibold text-white">Skills</h4>
+            <h2 class="mb-2 text-3xl font-bold text-slate-200">
+              Programming Language and Framework
+            </h2>
+            <p class="font-medium text-slate-400 text-md">
+              Programming language and framework that I have experience with.
+            </p>
+          </div>
+        </div>
+        <div class="w-full px-4">
+          <div class="flex flex-wrap items-center justify-center pb-8">
+            <div class="flex flex-col mb-6 group">
+              <img
+                src="img/familiar/HTML5_Badge.svg"
+                alt=""
+                class="block custom-icon"
+                width="100"
+              />
+              <h1 class="pop-text">HTML</h1>
+            </div>
+            <div class="flex flex-col mb-6 group">
+              <img
+                src="img/familiar/CSS3_logo.svg"
+                alt=""
+                class="block custom-icon"
+                width="100"
+              />
+              <h1 class="pop-text">CSS</h1>
+            </div>
+            <div class="flex flex-col mb-6 group">
+              <img
+                src="img/familiar/Unofficial_JavaScript_logo_2.svg"
+                alt=""
+                class="block custom-icon"
+                width="100"
+              />
+              <h1 class="pop-text">JAVASCRIPT</h1>
+            </div>
+            <div class="flex flex-col mb-6 group">
+              <img
+                src="img/familiar/Bootstrap_logo.svg"
+                alt=""
+                class="block custom-icon"
+                width="100"
+              />
+              <h1 class="pop-text">BOOTSTRAP</h1>
+            </div>
+            <div class="flex flex-col mb-6 group">
+              <img
+                src="img/familiar/Tailwind_CSS_Logo.svg"
+                alt=""
+                class="block custom-icon"
+                width="100"
+              />
+              <h1 class="pop-text">TAILWINDCSS</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills Section End -->
+    <!-- Contact Section Start  -->
+    <section id="contact" class="pb-32 pt-36 dark:bg-dark">
+      <div class="w-11/12 mx-auto lg:w-9/12">
+        <div class="w-full mx-auto lg:w-2/3">
+          <div class="w-full px-4">
+            <div class="max-w-xl mx-auto mb-16 text-center">
+              <h4
+                class="mb-2 text-lg font-semibold text-primary dark:text-white"
+              >
+                Contact
+              </h4>
+            </div>
+            <form>
+              <div class="w-full px-4 mb-8">
+                <label
+                  for="name"
+                  class="text-base font-bold text-primary dark:text-white"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full p-3 rounded-md bg-slate-200 text-slate-800 dark:text-whitefocus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+                />
+              </div>
+              <div class="w-full px-4 mb-8">
+                <label
+                  for="email"
+                  class="text-base font-bold text-primary dark:text-white"
+                  >Email</label
+                >
+                <input
+                  type="text"
+                  id="email"
+                  class="w-full p-3 rounded-md bg-slate-200 text-slate-800 focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+                />
+              </div>
+              <div class="w-full px-4 mb-8">
+                <label
+                  for="message"
+                  class="text-base font-bold text-primary dark:text-white"
+                  >Message</label
+                >
+                <textarea
+                  type="text"
+                  id="message"
+                  class="w-full h-32 p-3 rounded-md bg-slate-200 text-slate-800 focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+                ></textarea>
+              </div>
+              <div class="w-full px-4">
+                <button
+                  class="w-full px-8 py-3 text-base font-semibold text-white transition-none duration-500 rounded-full bg-primary hover:opacity-80 hover:shadow-lg dark:bg-slate-300 dark:text-primary"
+                >
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section End  -->
+    <!-- Footer Section Start -->
+    <footer class="pt-24 pb-12 bg-dark">
+      <div class="w-11/12 mx-auto lg:w-9/12">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-12 font-medium text-slate-300 md:w-1/3">
+            <h2 class="mb-2 text-2xl font-bold">Contact US</h2>
+            <h3>Farid Firdaus</h3>
+            <h4>Ciamis, West Java</h4>
+            <h5>Indonesia</h5>
+            <img
+              src="img/output-onlinepngtools (8).png"
+              alt="logo"
+              class="w-10"
+            />
+          </div>
+          <div class="w-full px-4 mb-12 md:w-1/3">
+            <h2 class="mb-5 text-xl font-semibold text-white">Field</h2>
+            <ul>
+              <li>
+                <a
+                  href="#portfolio"
+                  class="inline-block mb-3 text-base text-slate-300 hover:text-white"
+                  >Software Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="inline-block mb-3 text-base text-slate-300 hover:text-white"
+                  >cybersecurity</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="w-full px-4 mb-12 md:w-1/3">
+            <h2 class="mb-5 text-xl font-semibold text-white">Link</h2>
+            <ul>
+              <li>
+                <a
+                  href="#home"
+                  class="inline-block mb-3 text-base text-slate-300 hover:text-white"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="inline-block mb-3 text-base text-slate-300 hover:text-white"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  class="inline-block mb-3 text-base text-slate-300 hover:text-white"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#skills"
+                  class="inline-block mb-3 text-base text-slate-300 hover:text-white"
+                  >Skills</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="inline-block mb-3 text-base text-slate-300 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="w-full pt-10 border-t border-slate-700">
+            <div class="flex items-center justify-center mb-5">
+              <!-- Linkedin -->
+              <a
+                href="https://www.linkedin.com/in/farid-firdaus-2b0034297"
+                target="_blank"
+                class="custom-border"
+                ><svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  class="fill-current"
+                >
+                  <title>LinkedIn</title>
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  /></svg
+              ></a>
+              <!-- Linkedin End -->
+              <!-- Instagram -->
+              <a
+                href="https://www.instagram.com/riddd.fir"
+                class="custom-border"
+                target="_blank"
+                ><svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  class="fill-current"
+                >
+                  <title>Instagram</title>
+                  <path
+                    d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+                  />
+                </svg>
+              </a>
+              <!-- Instagram End-->
+              <!-- Github Start -->
+              <a
+                href="https://github.com/faridfirdaus-fred"
+                target="_blank"
+                class="custom-border"
+              >
+                <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-current"
+                  width="20"
+                >
+                  <title>GitHub</title>
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                  /></svg
+              ></a>
+              <!-- Facebook Start -->
+              <a
+                href="https://www.facebook.com/farid.forster.5/"
+                class="custom-border"
+                target="_blank"
+                ><svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  class="fill-current"
+                >
+                  <title>Facebook</title>
+                  <path
+                    d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"
+                  /></svg
+              ></a>
+              <!-- Facebook End -->
+              <!-- Email Start -->
+              <a
+                href="mailto:fdiraf77@gmail.com"
+                target="_blank"
+                class="custom-border"
+              >
+                <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  class="fill-current"
+                >
+                  <title>Gmail</title>
+                  <path
+                    d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+                  /></svg
+              ></a>
+              <!-- Email End -->
+              <!-- X Start -->
+              <a
+                href="https://twitter.com/faredrid"
+                target="_blank"
+                class="custom-border"
+                ><svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  class="fill-current"
+                >
+                  <title>X</title>
+                  <path
+                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+                  /></svg
+              ></a>
+              <!-- X End -->
+            </div>
+            <p class="text-sm font-medium text-center text-slate-500">
+              Created by Farid Firdaus, using Tailwindcss 3.4.3
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+    <!-- Back to top start -->
+    <a
+      href="#home"
+      class="fixed flex w-14 h-14 bg-primary bottom-4 right-4 z-[999] items-center justify-center rounded-full hover:animate-pulse"
+      id="to-top"
+    >
+      <span class="block w-5 h-5 mt-2 rotate-45 border-t-2 border-l-2"></span
+    ></a>
+    <!-- Back to top end -->
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
